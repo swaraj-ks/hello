@@ -1,0 +1,110 @@
+{
+	"id": "e8e7f4d3-ef53-2153-c1c3-176443902cb5",
+	"name": "chewy",
+	"description": "",
+	"order": [
+		"c1f78fe4-92d4-16ab-1539-e5c9d7eda2c1",
+		"fd81814e-0046-8b1c-7be7-fcc871699049",
+		"baad5f0b-dfbb-a243-1d59-a358e711d356"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1573306975247,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "baad5f0b-dfbb-a243-1d59-a358e711d356",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://13.235.165.75:9052/product/updateName",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "e8e7f4d3-ef53-2153-c1c3-176443902cb5",
+			"data": [],
+			"dataMode": "raw",
+			"name": "http://13.235.165.75:9052/product/updateName",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1575045659684,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\"_id\":\"5ddfed4649be013821d145af\",\"name\":\"test 13\"}"
+		},
+		{
+			"id": "c1f78fe4-92d4-16ab-1539-e5c9d7eda2c1",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://13.235.187.112:3001/sendotp/otp_verification",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "e8e7f4d3-ef53-2153-c1c3-176443902cb5",
+			"data": [],
+			"dataMode": "raw",
+			"name": "http://13.235.187.112:3001/sendotp/otp_verification",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1573306976563,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n\t\"mobile_number\":9790054083,\n\t\"otp\":3626\n}"
+		},
+		{
+			"id": "fd81814e-0046-8b1c-7be7-fcc871699049",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://13.235.187.112:3001/nutriants",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "e8e7f4d3-ef53-2153-c1c3-176443902cb5",
+			"data": [],
+			"dataMode": "raw",
+			"name": "http://13.235.187.112:3001/nutriants",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1574908241466,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\"age\":20}"
+		}
+	]
+}

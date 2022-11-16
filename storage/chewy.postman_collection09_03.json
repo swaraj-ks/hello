@@ -1,0 +1,1334 @@
+{
+	"info": {
+		"_postman_id": "e93a3d58-1859-48a7-aa13-d7d3ed1f6d64",
+		"name": "chewy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "medical records",
+			"item": [
+				{
+					"name": "get all medical condition",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{my_chewy}}/medcond/get_all_medcond",
+							"host": [
+								"{{my_chewy}}"
+							],
+							"path": [
+								"medcond",
+								"get_all_medcond"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get medical condition",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{my_chewy}}/medcond/getmedcond/Diab",
+							"host": [
+								"{{my_chewy}}"
+							],
+							"path": [
+								"medcond",
+								"getmedcond",
+								"Diab"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add user report",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"Sl_No\" : \"A1\",\n\t\"Condition\" : \"Diabetes\",\n\t\"TestNames\" : \"HbA1c\",\n\t\"Units\" : \"-\",\n\t\"user_id\":\"5e22a4316974a9f0ad39e645\",\n\t\"user_value\":\"12\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{my_chewy}}/medcond/add_user_report",
+							"host": [
+								"{{my_chewy}}"
+							],
+							"path": [
+								"medcond",
+								"add_user_report"
+							]
+						},
+						"description": "add user report"
+					},
+					"response": []
+				},
+				{
+					"name": "get test of the condition and user history",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{my_chewy}}/medcond/getTest/diabetes/fsasd",
+							"host": [
+								"{{my_chewy}}"
+							],
+							"path": [
+								"medcond",
+								"getTest",
+								"diabetes",
+								"fsasd"
+							]
+						},
+						"description": "add user report"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "product search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{my_chewy}}/product/search/Noodle",
+							"host": [
+								"{{my_chewy}}"
+							],
+							"path": [
+								"product",
+								"search",
+								"Noodle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": " get Product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{my_chewy}}/product/getproduct/INoodle Record/0",
+							"host": [
+								"{{my_chewy}}"
+							],
+							"path": [
+								"product",
+								"getproduct",
+								"INoodle Record",
+								"0"
+							]
+						},
+						"description": "/product/getproduct/{name}/{validation}"
+					},
+					"response": []
+				},
+				{
+					"name": "9999",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{my_chewy}}/product/9999/Noodle Record/2/250/1%20Cup%20-%20All%20Liquid%20Measurements%20&%20Oil%20(250ml)",
+							"host": [
+								"{{my_chewy}}"
+							],
+							"path": [
+								"product",
+								"9999",
+								"Noodle Record",
+								"2",
+								"250",
+								"1%20Cup%20-%20All%20Liquid%20Measurements%20&%20Oil%20(250ml)"
+							]
+						},
+						"description": "calculate the total value of the product"
+					},
+					"response": []
+				},
+				{
+					"name": "Test product",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"value2\":{\n\t\"5e11e902c15bdcdd026cabb8\": 20.34,\n\"5e11e903c15bdcdd026cafa8\": 8.32,\n\"5e11e903c15bdcdd026cafb6\": 20.34,\n\"5e11e903c15bdcdd026cafae\": 1.73,\n\"5e11e903c15bdcdd026cafaf\": 0.28,\n\"5e11e904c15bdcdd026cbb03\": 2.77,\n\"5e326bfb5908807999bc6a4a\": 22.86\n}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{my_chewy}}/product/testProduct/Noodle Record/0",
+							"host": [
+								"{{my_chewy}}"
+							],
+							"path": [
+								"product",
+								"testProduct",
+								"Noodle Record",
+								"0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update name",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"_id\":[\"5e19a7b77edea70cfbf1a818\"],\"name\":\"Idly\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{my_chewy}}/product/updateName",
+							"host": [
+								"{{my_chewy}}"
+							],
+							"path": [
+								"product",
+								"updateName"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Food",
+			"item": [
+				{
+					"name": "Food search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{chewy}}/foods?search=Noodle Record&userid=5d64bdb0d04e3a515d08f3ac&type=BREAKFAST",
+							"host": [
+								"{{chewy}}"
+							],
+							"path": [
+								"foods"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "Noodle Record"
+								},
+								{
+									"key": "userid",
+									"value": "5d64bdb0d04e3a515d08f3ac"
+								},
+								{
+									"key": "type",
+									"value": "BREAKFAST"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "food serach with type",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{chewy}}/foods?limit=3&userid=5d6784a61c46fb651a55858a&type=LUNCH",
+							"host": [
+								"{{chewy}}"
+							],
+							"path": [
+								"foods"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "3"
+								},
+								{
+									"key": "userid",
+									"value": "5d6784a61c46fb651a55858a"
+								},
+								{
+									"key": "type",
+									"value": "LUNCH"
+								}
+							]
+						},
+						"description": "http://13.235.165.75:8052/foods?limit=3&userid=5d6784a61c46fb651a55858a&type=LUNCH"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "favorite",
+			"item": [
+				{
+					"name": "Add favorite",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"name\":\"LUNCH\",\"userId\":\"1dasd231221312\",\"food\":[{\n                \"_id\": \"5df5e30c696de0756d1355ec\",\n                \"name\": \"Unique Food\",\n                \"uom\": \"Grams(g)\",\n                \"res_wt\": 0,\n                \"total_value\": 128.81,\n                \"isProduct\": \"1.57\",\n                \"wt\": 331.2,\n                \"ASH2\": 6.430000000000001,\n                \"F18D3N32\": 798.28,\n                \"F20D5N3\": 0,\n                \"F22D6N3\": 0,\n                \"ERGCAL2\": 24.770000000000003,\n                \"CHOCAL2\": 0,\n                \"VITK22\": 0,\n                \"VITK12\": 10.49,\n                \"PROTCNT2\": 0,\n                \"llok\": {\n                    \"_id\": \"5d77da04b381c55486950f14\",\n                    \"Name\": \"Grams(g)\",\n                    \"measurement\": \"\",\n                    \"measure\": \"g\",\n                    \"value\": 1,\n                    \"unit1\": \"\",\n                    \"unit2\": \"\"\n                },\n                \"Calories\": 1015.12,\n                \"Carbohydrates\": 149.06000000000003,\n                \"Protein\": 71.38000000000001,\n                \"Fat\": 11.54,\n                \"Calcium\": 173.73,\n                \"Iron\": 15.870000000000001,\n                \"Zinc\": 9.57,\n                \"Magnesium\": 431,\n                \"Potassium\": 3141.65,\n                \"Sodium\": 60.36,\n                \"Omega3\": 798.28,\n                \"DietaryFibers\": 42.88,\n                \"cholesterol\": 0,\n                \"SaturatedFat\": 1265.3,\n                \"PolyunsaturatedFat\": 5793.01,\n                \"MonounsaturatedFat\": 2371.4700000000003,\n                \"Sugars\": 2.87,\n                \"VitaminA1\": 0,\n                \"VitaminA1_R\": 0,\n                \"VitaminA1_C\": 349.27,\n                \"VitaminD\": 24.770000000000003,\n                \"VitaminB1\": 0.26,\n                \"VitaminB2\": 0.13,\n                \"VitaminB3\": 5.25,\n                \"VitaminB5\": 6.2,\n                \"VitaminB6\": 0.36,\n                \"VitaminB9\": 464.46999999999997,\n                \"Vitamin12\": 0,\n                \"VitaminC\": 1.33,\n                \"VitaminB7\": 2.91,\n                \"VitaminE\": 0.2,\n                \"CompFood1\": [],\n                \"CompFood2\": 2166.74,\n                \"principle_unit\": [\n                    {\n                        \"_id\": \"5deba2523fbf1913db3476e3\",\n                        \"Front_Name\": \"Cup(250g)\",\n                        \"Name\": \"1 cup - Liquid and semi solid - curries, gravies, soup, Dal\",\n                        \"measurement\": \"250g/ml\",\n                        \"Factor\": 2.5,\n                        \"measure\": \"g/ml\",\n                        \"value\": 250\n                    }\n                ],\n                \"principle_unit_2\": [\n                    {\n                        \"_id\": \"5deba2523fbf1913db3476e3\",\n                        \"Front_Name\": \"Cup(250g)\",\n                        \"Name\": \"1 cup - Liquid and semi solid - curries, gravies, soup, Dal\",\n                        \"measurement\": \"250g/ml\",\n                        \"Factor\": 2.5,\n                        \"measure\": \"g/ml\",\n                        \"value\": 250\n                    }\n                ],\n                \"variable_unit\": [\n                    {\n                        \"_id\": \"5deba2523fbf1913db3476e7\",\n                        \"Front_Name\": \"Ladle(50g)\",\n                        \"Name\": \"Ladle, Veggies, Meat [OR] Flat (50g)\",\n                        \"measurement\": \"50g\",\n                        \"Factor\": 0.5,\n                        \"measure\": \"g\",\n                        \"value\": 50\n                    }\n                ],\n                \"variable_unit_2\": [\n                    {\n                        \"_id\": \"5deba2523fbf1913db3476e7\",\n                        \"Front_Name\": \"Ladle(50g)\",\n                        \"Name\": \"Ladle, Veggies, Meat [OR] Flat (50g)\",\n                        \"measurement\": \"50g\",\n                        \"Factor\": 0.5,\n                        \"measure\": \"g\",\n                        \"value\": 50\n                    }\n                ],\n                \"fixed_unit\": [\n                    {\n                        \"Front_Name\": \"Grams(g)\",\n                        \"Name\": \"Grams(g)\",\n                        \"measurement\": \"\",\n                        \"Factor\": 1,\n                        \"measure\": \"g\",\n                        \"value\": \"\"\n                    }\n                ],\n                \"unit_measure\": \"Grams(g)\",\n                \"CADMIUM\": 0,\n                \"CHROMIUM\": 0.01,\n                \"Choline\": 0,\n                \"Copper\": 2.27,\n                \"VitaminA2\": 2757.48,\n                \"serving_size_for_recipe\": [\n                    \"1 cup - Liquid and semi solid - curries, gravies, soup, Dal\",\n                    \"Ladle, Veggies, Meat [OR] Flat (50g)\"\n                ],\n                \"VitaminB\": 2166.74,\n                \"glycemic_index\": null,\n                \"notes\": \"\",\n                \"VitaminK\": 10.49,\n                \"MANGANESE\": 4.71,\n                \"PHOSPHROUS\": 1073.7,\n                \"ARSENIC\": 0,\n                \"OMEGA_6\": 0,\n                \"OMEGA_9\": 0,\n                \"Product\": \"A001 Amaranth Seed, Black (Amaranthus Cruentus) A. Moricha  guti;  H.  Ramdana;  Kan.  Danthu  beeja;  Kash. Mawal;  Mal.  Cheera  vithu;  M.  Chengkruk  Maru;  Mar. Cavali biya; O. Kosala sag manji Dhala; P. Chaulali beej; Tam. Keerai vidai; Tel. Thotakoora ginjalu.\",\n                \"state\": \"Tamil Nadu\",\n                \"mtype\": \"breakfast lunch \",\n                \"qty\": 200\n            }]}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{my_chewy}}/favorite/addfavorite",
+							"host": [
+								"{{my_chewy}}"
+							],
+							"path": [
+								"favorite",
+								"addfavorite"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get favorite(/get_favorite/{:limit})",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{my_chewy}}/favorite/get_favorite/100",
+							"host": [
+								"{{my_chewy}}"
+							],
+							"path": [
+								"favorite",
+								"get_favorite",
+								"100"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Goal",
+			"item": [
+				{
+					"name": "add  goal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userweight\":22,\n\t\"userAge\":22,\n\t\"selectedGoal\":\"Incres\",\n\t\"userid\":\"daasd2\",\n\t\"calperday\":12.1,\n\t\"pcprot\":12.1,\n\t\"pcfat\":12,\n\t\"pccarb\":11.1,\n\t\"goalweight\":40,\n\t\"goaltime\":1,\n\t\"userHeight\":122,\n\t\"bmi\":12\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{my_chewy}}/goal/add",
+							"host": [
+								"{{my_chewy}}"
+							],
+							"path": [
+								"goal",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get goal by date(YYY-MM-DD)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{my_chewy}}/goal/getgoal/2020-03-25/5e22a4316974a9f0ad39e645",
+							"host": [
+								"{{my_chewy}}"
+							],
+							"path": [
+								"goal",
+								"getgoal",
+								"2020-03-25",
+								"5e22a4316974a9f0ad39e645"
+							]
+						},
+						"description": "/goal/getgoal/{DATE}/{userid}"
+					},
+					"response": []
+				},
+				{
+					"name": "get all goals",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{my_chewy}}/goal/getgoals",
+							"host": [
+								"{{my_chewy}}"
+							],
+							"path": [
+								"goal",
+								"getgoals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getgoalsuser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"userid\":\"5e22a4316974a9f0ad39e645\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{my_chewy}}/goal/getgoalsuser",
+							"host": [
+								"{{my_chewy}}"
+							],
+							"path": [
+								"goal",
+								"getgoalsuser"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "meal",
+			"item": [
+				{
+					"name": "meal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{chewy}}/meals",
+							"host": [
+								"{{chewy}}"
+							],
+							"path": [
+								"meals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add meal",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"dinner\",\n\t\"user\": \"new\",\n\t\"food\": [{\n\t\t\"_id\": \"5df5e30c696de0756d1355ec\",\n\t\t\"name\": \"Unique Food\",\n\t\t\"all\": {\n\t\t\t\"_id\": \"5df5e30c696de0756d1355ec\",\n\t\t\t\"name\": \"Unique Food\",\n\t\t\t\"uom\": \"Grams(g)\",\n\t\t\t\"res_wt\": 150,\n\t\t\t\"wt\": 200,\n\t\t\t\"llok\": {\n\t\t\t\t\"_id\": \"5d77da04b381c55486950f14\",\n\t\t\t\t\"Name\": \"Grams(g)\",\n\t\t\t\t\"measurement\": \"\",\n\t\t\t\t\"measure\": \"g\",\n\t\t\t\t\"value\": 1,\n\t\t\t\t\"unit1\": \"\",\n\t\t\t\t\"unit2\": \"\"\n\t\t\t},\n\t\t\t\"Calories\": 1199,\n\t\t\t\"Carbohydrates\": 232.98,\n\t\t\t\"Protein\": 50.470000000000006,\n\t\t\t\"Fat\": 3.57,\n\t\t\t\"Calcium\": 98.48,\n\t\t\t\"Iron\": 8.3,\n\t\t\t\"Zinc\": 6.92,\n\t\t\t\"Magnesium\": 298.1,\n\t\t\t\"Potassium\": 1951.5,\n\t\t\t\"Sodium\": 33,\n\t\t\t\"SaturatedFat\": 782,\n\t\t\t\"PolyunsaturatedFat\": 1619,\n\t\t\t\"MonounsaturatedFat\": 513,\n\t\t\t\"Sugars\": 5016,\n\t\t\t\"VitaminA1\": 0,\n\t\t\t\"VitaminB1\": 0.42000000000000004,\n\t\t\t\"VitaminB2\": 0.24000000000000002,\n\t\t\t\"VitaminB3\": 6.02,\n\t\t\t\"VitaminB5\": 5.569999999999999,\n\t\t\t\"VitaminB6\": 0.5700000000000001,\n\t\t\t\"VitaminB9\": 151.76999999999998,\n\t\t\t\"VitaminC\": 0,\n\t\t\t\"VitaminB7\": 2.42,\n\t\t\t\"VitaminE\": 0.38,\n\t\t\t\"CompFood1\": [],\n\t\t\t\"CompFood2\": 5016,\n\t\t\t\"principle_unit\": [{\n\t\t\t\t\"_id\": \"5deba2523fbf1913db3476e3\",\n\t\t\t\t\"Front_Name\": \"Cup(250g)\",\n\t\t\t\t\"Name\": \"1 cup - Liquid and semi solid - curries, gravies, soup, Dal\",\n\t\t\t\t\"measurement\": \"250g/ml\",\n\t\t\t\t\"Factor\": 2.5,\n\t\t\t\t\"measure\": \"g/ml\",\n\t\t\t\t\"value\": 250\n\t\t\t}],\n\t\t\t\"principle_unit_2\": [{\n\t\t\t\t\"_id\": \"5deba2523fbf1913db3476e3\",\n\t\t\t\t\"Front_Name\": \"Cup(250g)\",\n\t\t\t\t\"Name\": \"1 cup - Liquid and semi solid - curries, gravies, soup, Dal\",\n\t\t\t\t\"measurement\": \"250g/ml\",\n\t\t\t\t\"Factor\": 2.5,\n\t\t\t\t\"measure\": \"g/ml\",\n\t\t\t\t\"value\": 250\n\t\t\t}],\n\t\t\t\"variable_unit\": [{\n\t\t\t\t\"_id\": \"5deba2523fbf1913db3476e7\",\n\t\t\t\t\"Front_Name\": \"Ladle(50g)\",\n\t\t\t\t\"Name\": \"Ladle, Veggies, Meat [OR] Flat (50g)\",\n\t\t\t\t\"measurement\": \"50g\",\n\t\t\t\t\"Factor\": 0.5,\n\t\t\t\t\"measure\": \"g\",\n\t\t\t\t\"value\": 50\n\t\t\t}],\n\t\t\t\"variable_unit_2\": [{\n\t\t\t\t\"_id\": \"5deba2523fbf1913db3476e7\",\n\t\t\t\t\"Front_Name\": \"Ladle(50g)\",\n\t\t\t\t\"Name\": \"Ladle, Veggies, Meat [OR] Flat (50g)\",\n\t\t\t\t\"measurement\": \"50g\",\n\t\t\t\t\"Factor\": 0.5,\n\t\t\t\t\"measure\": \"g\",\n\t\t\t\t\"value\": 50\n\t\t\t}],\n\t\t\t\"fixed_unit\": \"GRAMS\",\n\t\t\t\"unit_measure\": \"Grams(g)\",\n\t\t\t\"CADMIUM\": 0,\n\t\t\t\"CHROMIUM\": 0.03,\n\t\t\t\"Copper\": 1.42,\n\t\t\t\"VitaminA2\": 452.24,\n\t\t\t\"serving_size_for_recipe\": [\"1 cup - Liquid and semi solid - curries, gravies, soup, Dal\", \"Ladle, Veggies, Meat [OR] Flat (50g)\"],\n\t\t\t\"VitaminB\": 5016,\n\t\t\t\"glycemic_index\": null,\n\t\t\t\"notes\": \"\",\n\t\t\t\"VitaminD\": 0,\n\t\t\t\"VitaminK\": 0,\n\t\t\t\"MANGANESE\": 3.65,\n\t\t\t\"PHOSPHROUS\": 754.5,\n\t\t\t\"ARSENIC\": 0,\n\t\t\t\"OMEGA_3\": 868.02,\n\t\t\t\"OMEGA_6\": 0,\n\t\t\t\"OMEGA_9\": 0,\n\t\t\t\"Product\": \"A015 Rice, raw, milled  (Oryza sativa ) A. Milat khunda chaul; B. Chowl; G. Choka; H. Chawal; Kan. Akki; Kash. Tomul;  Kh. Khaw boil;  M.  Cheng; Mar.  Tondool;  O. Chaula; P. Chaul;  Tam. Arisi; Tel. Biyyam.\",\n\t\t\t\"state\": \"Tamil Nadu\",\n\t\t\t\"mtype\": \"breakfast lunch \",\n\t\t\t\"qty\": 200,\n\t\t\t\"code\": \"A015\",\n\t\t\t\"key\": \"0\"\n\t\t},\n\t\t\"size\": \"1.00\",\n\t\t\"total_Calories\":\"1.6\",\n\t\t\"sizeMeasure\": \"Cuptt(2522g)\",\n\t\t\"foodType\": \"food\"\n\t}]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{chewy}}/meals",
+							"host": [
+								"{{chewy}}"
+							],
+							"path": [
+								"meals"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get meal with user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{my_chewy}}/meal/getmeal/5e27ec196974a9f0ad5d9b69",
+							"host": [
+								"{{my_chewy}}"
+							],
+							"path": [
+								"meal",
+								"getmeal",
+								"5e27ec196974a9f0ad5d9b69"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getmeal with date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{my_chewy}}/meal/getmeal/5e27ec196974a9f0ad5d9b69/2020-01-22",
+							"host": [
+								"{{my_chewy}}"
+							],
+							"path": [
+								"meal",
+								"getmeal",
+								"5e27ec196974a9f0ad5d9b69",
+								"2020-01-22"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get getaggregatedmeals ",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{chewy}}/getaggregatedmeals/?userId=5e22a5b56974a9f0ad39f14e&age=2&timeline=2020-01-22",
+							"host": [
+								"{{chewy}}"
+							],
+							"path": [
+								"getaggregatedmeals",
+								""
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "5e22a5b56974a9f0ad39f14e"
+								},
+								{
+									"key": "age",
+									"value": "2"
+								},
+								{
+									"key": null,
+									"value": null
+								},
+								{
+									"key": "timeline",
+									"value": "2020-01-22"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get aggregate meals with date",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{chewy}}/getaggregatedmeals/?date=2020-03-02&userId=5e22a5b56974a9f0ad39f14e&age=2",
+							"host": [
+								"{{chewy}}"
+							],
+							"path": [
+								"getaggregatedmeals",
+								""
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2020-03-02"
+								},
+								{
+									"key": "userId",
+									"value": "5e22a5b56974a9f0ad39f14e"
+								},
+								{
+									"key": "age",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "about me",
+			"item": [
+				{
+					"name": "about me save",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "userId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "location",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "waist",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "chest",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "hip",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "fat_mass",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "muscle_mass",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "profile_pic",
+									"value": " Home Jobs Tools Coding Ground Current Affairs UPSC Notes Online Tutors Whiteboard Net Meeting Tutorix   \ntutorialspoint\nSearch your favorite tutorials...\n \n  Library Videos Q/A eBooks\nExpressJS Tutorial\nExpressJS Video Tutorials\nExpressJS Tutorial\nExpressJS - Home\nExpressJS - Overview\nExpressJS - Environment\nExpressJS - Hello World\nExpressJS - Routing\nExpressJS - HTTP Methods\nExpressJS - URL Building\nExpressJS - Middleware\nExpressJS - Templating\nExpressJS - Static Files\nExpressJS - Form Data\nExpressJS - Database\nExpressJS - Cookies\nExpressJS - Sessions\nExpressJS - Authentication\nExpressJS - RESTful APIs\nExpressJS - Scaffolding\nExpressJS - Error handling\nExpressJS - Debugging\nExpressJS - Best Practices\nExpressJS - Resources\nExpressJS Useful Resources\nExpressJS - Quick Guide\nExpressJS - Useful Resources\nExpressJS - Discussion\nSelected Reading\nUPSC IAS Exams Notes\nDeveloper's Best Practices\nQuestions and Answers\nEffective Resume Writing\nHR Interview Questions\nComputer Glossary\nWho is Who\n\nExpressJS - Form data\nAdvertisements\n\n\n Previous PageNext Page  \nForms are an integral part of the web. Almost every website we visit offers us forms that submit or fetch some information for us. To get started with forms, we will first install the body-parser(for parsing JSON and url-encoded data) and multer(for parsing multipart/form data) middleware.\n\nTo install the body-parser and multer, go to your terminal and use −\n\nnpm install --save body-parser multer\nReplace your index.js file contents with the following code −\n\nvar express = require('express');\nvar bodyParser = require('body-parser');\nvar multer = require('multer');\nvar upload = multer();\nvar app = express();\n\napp.get('/', function(req, res){\n   res.render('form');\n});\n\napp.set('view engine', 'pug');\napp.set('views', './views');\n\n// for parsing application/json\napp.use(bodyParser.json()); \n\n// for parsing application/xwww-\napp.use(bodyParser.urlencoded({ extended: true })); \n//form-urlencoded\n\n// for parsing multipart/form-data\napp.use(upload.array()); \napp.use(express.static('public'));\n\napp.post('/', function(req, res){\n   console.log(req.body);\n   res.send(\"recieved your request!\");\n});\napp.listen(3000);\nAfter importing the body parser and multer, we will use the body-parser for parsing json and x-www-form-urlencoded header requests, while we will use multer for parsing multipart/form-data.\n\nLet us create an html form to test this out. Create a new view called form.pug with the following code −\n\nhtml\nhtml\n   head\n      title Form Tester\n   body\n      form(action = \"/\", method = \"POST\")\n         div\n            label(for = \"say\") Say:\n            input(name = \"say\" value = \"Hi\")\n         br\n         div\n            label(for = \"to\") To:\n            input(name = \"to\" value = \"Express forms\")\n         br\n         button(type = \"submit\") Send my greetings\nRun your server using the following.\n\nnodemon index.js\nNow go to localhost:3000/ and fill the form as you like, and submit it. The following response will be displayed −\n\nResponse to form submission\nHave a look at your console; it will show you the body of your request as a JavaScript object as in the following screenshot −\n\nConsole output for form\nThe req.body object contains your parsed request body. To use fields from that object, just use them like normal JS objects.\n\nThis is the most recommended way to send a request. There are many other ways, but those are irrelevant to cover here, because our Express app will handle all those requests in the same way. To read more about different ways to make a request, have a look at this page.\n\n Previous Page  Print PageNext Page  \nAdvertisements\n\n\n\n\nTutorials Point\n About us  Terms of use  Privacy Policy  FAQ's  Helping  Contact\n© Copyright 2020. All Rights Reserved.",
+									"type": "text"
+								}
+							],
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{my_chewy}}/about_me/save",
+							"host": [
+								"{{my_chewy}}"
+							],
+							"path": [
+								"about_me",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "{{my_chewy}}/about_me/save",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "asd",
+									"value": "das",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{my_chewy}}/about_me/save",
+							"host": [
+								"{{my_chewy}}"
+							],
+							"path": [
+								"about_me",
+								"save"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "create users",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"VidyaSairam\",\n\t\"email\": \"bvidyasairam@chewy.health\",\n\t\"password\": \"vidyasairam\",\n\t\"phone\": 9962541124,\n\t\"sex\": \"male\",\n\t\"imeiNumber\": \"xxxxxxxxx\",\n\t\"acl\": \"\",\n\t\"nick\": \"\",\n\t\"weight\": 0,\n\t\"height\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{chewy}}/users",
+							"host": [
+								"{{chewy}}"
+							],
+							"path": [
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add_device_id",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"type": "text",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"mobile_no\":9790054083,\n\"deviceId\":\"dadqwdqw\",\n\"deviceToken\":\"asd\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{my_chewy}}/sendotp/add_deviceId",
+							"host": [
+								"{{my_chewy}}"
+							],
+							"path": [
+								"sendotp",
+								"add_deviceId"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "waters",
+			"item": [
+				{
+					"name": "get Waters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{chewy}}/water/?timeline=2020-01-21&userId=5e233c9b6974a9f0ad3dde2b",
+							"host": [
+								"{{chewy}}"
+							],
+							"path": [
+								"water",
+								""
+							],
+							"query": [
+								{
+									"key": "timeline",
+									"value": "2020-01-21"
+								},
+								{
+									"key": "userId",
+									"value": "5e233c9b6974a9f0ad3dde2b"
+								},
+								{
+									"key": null,
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add water",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user\": \"5e2c1a936974a9f0ad79db2f\",\n\t\"activityName\": {\n\t\t\"activityName\": \"bicycling, mountain, competitive, racing\",\n\t\t\"burnCalories\": 17\n\t},\n\t\"burnCalories\": 17\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{chewy}}/water",
+							"host": [
+								"{{chewy}}"
+							],
+							"path": [
+								"water"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "live streaming",
+			"item": [
+				{
+					"name": "create stream",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"broadcastName\":\"test\",\n\t\"broadcastType\":\"live/recorded/audio\",\n\t\"broadcastingTime\":\"20012121\",\n\t\"user_type\":0,\n\t\"notification\":true,\n\t\"url\":\"\",\n\t\"status\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{my_chewy}}/liveStreming/create",
+							"host": [
+								"{{my_chewy}}"
+							],
+							"path": [
+								"liveStreming",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update broadcast",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"broadcastName\":\"new\",\n\t\"broadcastType\":\"live/recorded/audio\",\n\t\"broadcastingTime\":\"20012121\",\n\t\"user_type\":0,\n\t\"notification\":true,\n\t\"url\":\"\",\n\t\"status\":1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{my_chewy}}/liveStreming/update/5e613a0b41f083413a9d591d",
+							"host": [
+								"{{my_chewy}}"
+							],
+							"path": [
+								"liveStreming",
+								"update",
+								"5e613a0b41f083413a9d591d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get broadcast list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{my_chewy}}/liveStreming/list",
+							"host": [
+								"{{my_chewy}}"
+							],
+							"path": [
+								"liveStreming",
+								"list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload video",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "item_img",
+									"type": "file",
+									"src": "/Users/shankaranand/Documents/Screenshot 2019-12-01 at 10.56.38 PM.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://3.6.144.94:4000/api/upload",
+							"protocol": "http",
+							"host": [
+								"3",
+								"6",
+								"144",
+								"94"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get file name from the folder",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://3.6.144.94:4000/api/upload/getFiles",
+							"protocol": "http",
+							"host": [
+								"3",
+								"6",
+								"144",
+								"94"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"upload",
+								"getFiles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove file from storage",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://3.6.144.94:4000/api/upload/remove/80030.jpg",
+							"protocol": "http",
+							"host": [
+								"3",
+								"6",
+								"144",
+								"94"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"upload",
+								"remove",
+								"80030.jpg"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get live",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{my_chewy}}/liveStreming/active",
+							"host": [
+								"{{my_chewy}}"
+							],
+							"path": [
+								"liveStreming",
+								"active"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "challenge",
+			"item": [
+				{
+					"name": "get challage list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{my_chewy}}/challenge/getrawchallenge",
+							"host": [
+								"{{my_chewy}}"
+							],
+							"path": [
+								"challenge",
+								"getrawchallenge"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "accept challenge",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{my_chewy}}/challenge/acceptChallange/9790054083/2/5/lev0331",
+							"host": [
+								"{{my_chewy}}"
+							],
+							"path": [
+								"challenge",
+								"acceptChallange",
+								"9790054083",
+								"2",
+								"5",
+								"lev0331"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post challege workout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"workout\":{\t\"pushupsss\" : 20,\n\t\t\t\t\t\t\"situpsss\" : 20\n\t\t\t\t\t\t}}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{my_chewy}}/challenge/acceptChallange/9790054083/2/5/lev0331",
+							"host": [
+								"{{my_chewy}}"
+							],
+							"path": [
+								"challenge",
+								"acceptChallange",
+								"9790054083",
+								"2",
+								"5",
+								"lev0331"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "admin",
+			"item": [
+				{
+					"name": "newUser",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user_id\":\"sample\",\n        \"password\":\"sample\",\n        \"type\":\"normal/admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{my_chewy}}/admin/newUser",
+							"host": [
+								"{{my_chewy}}"
+							],
+							"path": [
+								"admin",
+								"newUser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user_id\":\"sample\",\n        \"password\":\"sample\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{my_chewy}}/admin/login",
+							"host": [
+								"{{my_chewy}}"
+							],
+							"path": [
+								"admin",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{my_chewy}}/admin/delUser/sample",
+							"host": [
+								"{{my_chewy}}"
+							],
+							"path": [
+								"admin",
+								"delUser",
+								"sample"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

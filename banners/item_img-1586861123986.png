@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>thypair_new.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>armv7</string>
+				<string>arm64</string>
+			</array>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>6238C3D11B3B4A7DD7A42970A90956FE9AB80877</string>
+				<key>dateExpires</key>
+				<string>09/03/21</string>
+				<key>type</key>
+				<string>Apple Development</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>52Y9XJTVXZ.org.reactjs.native.example.thypair-new-2</string>
+				<key>com.apple.developer.team-identifier</key>
+				<string>52Y9XJTVXZ</string>
+				<key>get-task-allow</key>
+				<true/>
+				<key>keychain-access-groups</key>
+				<array>
+					<string>52Y9XJTVXZ.org.reactjs.native.example.thypair-new-2</string>
+				</array>
+			</dict>
+			<key>name</key>
+			<string>thypair_new.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>bfd6e35f-ea17-4dc7-bed7-2747a363a85f</string>
+				<key>name</key>
+				<string>iOS Team Provisioning Profile: *</string>
+			</dict>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>52Y9XJTVXZ</string>
+				<key>name</key>
+				<string>Ashraf Basha</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
